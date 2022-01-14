@@ -10,3 +10,12 @@ type User {
 type Query {
   getAllUsers: [User]
 }
+
+input UserInput {
+  name: String,
+  username: String
+}
+
+type Mutation {
+  createUser(input: UserInput): User
+}
