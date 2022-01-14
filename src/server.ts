@@ -7,12 +7,15 @@ import { makeExecutableSchema } from '@graphql-tools/schema';
 
 import resolvers from './resolvers';
 import typeDefs from './schemas';
+import { routes } from 'routes';
+
+mongoose.connect('mongodb://localhost:27017/graphql_express');
 
 const app = express();
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/graphql_express');
+app.use(routes);
 
 const schema = makeExecutableSchema({
   resolvers,
