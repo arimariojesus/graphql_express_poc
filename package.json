@@ -7,8 +7,13 @@
     "dev": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_module -r tsconfig-paths/register src/server.ts"
   },
   "dependencies": {
+    "@graphql-tools/load-files": "^6.5.3",
+    "@graphql-tools/merge": "^8.2.1",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.2.0",
+    "graphql-tools": "^8.2.0",
     "mongoose": "^6.1.6",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.6.0"
